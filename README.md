@@ -11,21 +11,21 @@ Text generation system based on a mixed corpus of 《毛澤東語錄》(Quotatio
 ## Usage
 
 ###### 解說
-# src/data.py
+###### src/data.py
 - parse_corpus -> 生成input 長度為 seq_length，target 長度為 1
 - format_data -> 採用 mini-batch，尾巴不足 batch_size 的直接捨棄,每 batch_size 筆資料包成一組，並包成 tensor
-# model.py
+###### model.py
 - 輸入的每個中文字都會先轉成 embedding vector，也就是用一個 vector 來表示各個中文字
 - Dropout 則是常見的防止過擬合 (overfitting) 的手段，也就是在訓練過程中三不五時捨棄/忽略一些神經元，來減弱他們彼此間的聯合適應性 (co-adaptation)
 - LSTM 設定於hidden layer
-# train.py
+###### train.py
 - 加速器 : Adam
 - Loss : Cross_Entropy
 - 模型主架構 : LSTM
 
 
 ###### 混何語言庫
-# Direct Run
+###### Direct Run
 $ python3 mix.py ../../corpus/mao_sent.txt ../../corpus/luen_yu_sent.txt --output ../../corpus/corpus.txt
 
 ```bash
@@ -33,8 +33,8 @@ $ cd src/corpus
 $ python3 mix.py <first-corpus> <second-corpus> --output <output-corpus-text-file>
 
 ###### Train
-# Direct Run
-$ python3 -u -m train.train ../corpus/corpus.txt --output ../output/model/model_2020/model.bin --output-c ../output/model/model_2020/corpus.bin --seq-length 50 --batch-size 32 --embedding-dim 256 --hidden-dim 256 --lr 0.0001 --dropout 0.2 --epochs 30 > ../output/log/2020_02.log
+###### Direct Run
+$ python3 -m train.train ../corpus/corpus.txt --output ../output/model/model.bin --output-c ../output/model/corpus.bin --seq-length 50 --batch-size 4 --embedding-dim 256 --hidden-dim 256 --lr 0.0001 --dropout 0.2 --epochs 30
 
 ```bash
 $ cd src
