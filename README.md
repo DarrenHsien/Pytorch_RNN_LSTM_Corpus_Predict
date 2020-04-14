@@ -66,9 +66,9 @@ $ ./gen.sh
 │   ├── luen_yu_clean.txt                               # Raw corpus with irrelevant words removed
 │   ├── luen_yu_raw.txt                                 # Raw corpus
 │   ├── luen_yu_sent.txt                                # Clean corpus seperated into sentences
-│   ├── mao_clean.txt                                   # Raw corpus with irrelevant words removed
-│   ├── mao_raw.txt                                     # Raw corpus
-│   └── mao_sent.txt                                    # Clean corpus seperated into sentences
+│   ├── kobe_clean.txt                                   # Raw corpus with irrelevant words removed
+│   ├── kobe_raw.txt                                     # Raw corpus
+│   └── kobe_sent.txt                                    # Clean corpus seperated into sentences
 ├── output                                          # Results
 │   ├── log                                             # Log files
 │   └── model                                           # Pretrained models
