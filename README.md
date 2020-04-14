@@ -1,6 +1,6 @@
 # Resurrecting the Dead - Chinese
 
-Text generation system based on a mixed corpus of 《毛澤東語錄》(Quotations From Chairman Mao Tse-Tung) and《論語》(Confucian Analects).
+Text generation system based on a mixed corpus of Kobe bryant<勵志名言> and《論語》(Confucian Analects).
 
 |Framework|Model|Optimizer|
 |:-:|:-:|:-:|
